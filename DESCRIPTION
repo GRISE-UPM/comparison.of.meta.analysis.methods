@@ -1,0 +1,18 @@
+Package: ma.simulation.methods
+Version: 0.1
+Date: 2017-12-22
+Title: Comparison of meta analysis methods
+Authors@R: c(person("Oscar", "Dieste", role = c("aut", "cre"),
+                     email = "odieste@fi.upm.es"),
+             person("Omar", "Gomez", role = c("aut", "cre"),
+                     email = "ogomez@espoch.edu.ec"))
+Author: Oscar Dieste [aut, cre],
+  Omar Gomez [aut, cre]
+Maintainer: Omar Gomez <ogomez@espoch.edu.ec>
+Depends: R (>= 3.1.0), party (>= 1.2), Hmisc (>= 4.0)
+Suggests: testthat
+Description: Code associated to the paper "A procedure for selecting an appropriate meta-analysis 
+  method: A comparison of approaches", authored by Omar Gomez, Oscar Dieste, and Natalia Juristo.
+License: GPL (>= 2)
+URL: https://github.com/GRISE-UPM/ma-comparison-methods
+RoxygenNote: 6.0.1

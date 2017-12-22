@@ -21,10 +21,10 @@
 #setwd("/media/omar/Windows7_OS/SysPart/Default/Users/Omar/Dropbox/espoch/papers/tse_simulation/r_script/journal_script_simulation")
 
 
-source('wmd-functions.R')
-source('rr-functions.R')
-source('svc-functions.R')
-source('auxiliary_unequal.R')
+#source('wmd-functions.R')
+#source('rr-functions.R')
+#source('svc-functions.R')
+#source('auxiliary_unequal.R')
 
 
 # Generation of randonm samples sizes for each study (balanced studies)
@@ -571,61 +571,61 @@ setwd(file.path(mainDir, subDir))
 }
 
 
-#----  Starting variables initialization
-#
-# set output graphs directory
-mainDir<-'~/Desktop/Dropbox/RStudio/Simulacion TOSEM (web)(refactorizada)'
-subDir<-'plots'
-
-
-#
-# set output text file name
-fname <- "output.txt"
-
-
-#
-# Basic simulation parameters
-repetitions <- 1000
-alpha       <- 0.05
-cutoff      <- qnorm(1-(alpha/2))
-
-#
-# Specific simulation parameters
-# plus some others
-list_experiments            <- c (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
-
-#if it contains only one value, sample size is the same in all experiments, otherwise, sample sizes of all experiments are randomized
-list_sample_sizes           <- c(22) # reference values c(2, 4, 6, 8, 10, 15, 20, 30)
-
-list_effect_sizes           <- c(0,0.5) # reference values c(0, 0.2, 0.5, 0.8, 1.2, 2)
-real_control_mean           <- 10
-
-#factor of debalancing
-fixed_unbalanced_factor     <- 0.5
-
-#when it is true all experiments are debalanced by the same fixed unbalanced factor
-fixed_unbalanced            <- FALSE
-
-#random factor to debalancing samples, when it is true, random factor takes values less or equal than fixed_unbalanced_factor
-random_unbalanced           <- FALSE
-
-#
-# The standard deviation, we assume reference values of 10% - 50% - 100% - 200% - 400% of the control treatment
-list_standard_deviations <- c(0.5*real_control_mean)  # reference values c(0.1*real_control_mean, 0.5*real_control_mean, real_control_mean, 2*real_control_mean, 4*real_control_mean)
-#
-# tau-squared's, to explore the effect of heterogeneity,
-list_taus <- c(0.1*real_control_mean) #reference values c(0, 0.01*real_control_mean, 0.05*real_control_mean, 0.1*real_control_mean, 0.5*real_control_mean, real_control_mean, 2*real_control_mean, 4*real_control_mean)
-
-#Output postscript or png graphics
-ps<-FALSE #TRUE
-
-
-
-
-#run the simulation
-simulation <- montecarlo(TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,repetitions,alpha,cutoff,list_experiments,
-                         list_sample_sizes,random_unbalanced,fixed_unbalanced_factor,fixed_unbalanced,list_effect_sizes,real_control_mean,
-                         list_standard_deviations,list_taus,fname,mainDir,subDir,ps)
-
-rm(list=ls())
-
+# #----  Starting variables initialization
+# #
+# # set output graphs directory
+# mainDir<-'~/Desktop/Dropbox/RStudio/Simulacion TOSEM (web)(refactorizada)'
+# subDir<-'plots'
+# 
+# 
+# #
+# # set output text file name
+# fname <- "output.txt"
+# 
+# 
+# #
+# # Basic simulation parameters
+# repetitions <- 1000
+# alpha       <- 0.05
+# cutoff      <- qnorm(1-(alpha/2))
+# 
+# #
+# # Specific simulation parameters
+# # plus some others
+# list_experiments            <- c (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+# 
+# #if it contains only one value, sample size is the same in all experiments, otherwise, sample sizes of all experiments are randomized
+# list_sample_sizes           <- c(22) # reference values c(2, 4, 6, 8, 10, 15, 20, 30)
+# 
+# list_effect_sizes           <- c(0,0.5) # reference values c(0, 0.2, 0.5, 0.8, 1.2, 2)
+# real_control_mean           <- 10
+# 
+# #factor of debalancing
+# fixed_unbalanced_factor     <- 0.5
+# 
+# #when it is true all experiments are debalanced by the same fixed unbalanced factor
+# fixed_unbalanced            <- FALSE
+# 
+# #random factor to debalancing samples, when it is true, random factor takes values less or equal than fixed_unbalanced_factor
+# random_unbalanced           <- FALSE
+# 
+# #
+# # The standard deviation, we assume reference values of 10% - 50% - 100% - 200% - 400% of the control treatment
+# list_standard_deviations <- c(0.5*real_control_mean)  # reference values c(0.1*real_control_mean, 0.5*real_control_mean, real_control_mean, 2*real_control_mean, 4*real_control_mean)
+# #
+# # tau-squared's, to explore the effect of heterogeneity,
+# list_taus <- c(0.1*real_control_mean) #reference values c(0, 0.01*real_control_mean, 0.05*real_control_mean, 0.1*real_control_mean, 0.5*real_control_mean, real_control_mean, 2*real_control_mean, 4*real_control_mean)
+# 
+# #Output postscript or png graphics
+# ps<-FALSE #TRUE
+# 
+# 
+# 
+# 
+# #run the simulation
+# simulation <- montecarlo(TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,repetitions,alpha,cutoff,list_experiments,
+#                          list_sample_sizes,random_unbalanced,fixed_unbalanced_factor,fixed_unbalanced,list_effect_sizes,real_control_mean,
+#                          list_standard_deviations,list_taus,fname,mainDir,subDir,ps)
+# 
+# rm(list=ls())
+# 
