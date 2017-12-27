@@ -1,11 +1,11 @@
-# -----------------------------------------------------------------------------------------------------------
-# Research: A procedure for selecting an appropriate meta-analysis method: A comparison of approaches
-# File name: rr-functions.R
-# File type: secondary R Script
-# Creation date: March 2015
+# ----------------------------------------------------------------------------------------------------------------
+# Research             : A procedure for selecting an appropriate meta-analysis method: A comparison of approaches
+# File name            : rr-functions.R
+# File type            : Auxiliary functions
+# Purpose              : Functions to perform meta-analysis using response ratios
+# Creation date        : March 2015 (later history available at GitHub)
 # R Script contributors: Oscar Dieste, Omar S. Gomez
-# Purpose: functions to perform meta-analysis using response ratios
-# ----------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------
 #
 
 

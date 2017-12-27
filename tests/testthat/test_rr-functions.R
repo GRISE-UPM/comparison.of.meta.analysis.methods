@@ -1,5 +1,17 @@
+# ----------------------------------------------------------------------------------------------------------------
+# Research             : A procedure for selecting an appropriate meta-analysis method: A comparison of approaches
+# File name            : test_rr-functions.R
+# File type            : Unit tests
+# Purpose              : Perform the unit testing of the functions included in the file rr-functions.R
+# Creation date        : History available at GitHub
+# R Script contributors: Oscar Dieste, Omar S. Gomez
+# ----------------------------------------------------------------------------------------------------------------
+#
+
 context('Response ratio tests')
-library(ma.simulation.methods)
+
+# Unit tests for: tell_rr
+#
 
 test_that('the rr of control = 1, treatment= 1, not using logs is 1', {
      CONTROL <- 1
